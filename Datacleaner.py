@@ -10,14 +10,14 @@ class Datacleaner:
 
     # dropping column form the datafram
     def dropping(self, col):
-        dropped = self.df.drop(columns = [col])
+        self.df = self.df.drop(columns = [col])
         # print(f' New frame after dropping column :\n {dropped}')
-        return dropped
+        return self.df
         
 dcleaner = Datacleaner(df)
 # print(dcleaner.df)
 
 dataframe = dcleaner.dropping('Cabin')
-print(dataframe)
+print(dcleaner.df)
 
     
