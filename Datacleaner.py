@@ -37,5 +37,6 @@ dataframe = dcleaner.mean('Age')
 
 dataframe = dcleaner.mode('Embarked')
 print(dataframe)
+if __name__ == '__main__':
 
-print(dcleaner.df.isnull().sum())
+    print(dcleaner.df.isnull().sum())
