@@ -26,17 +26,22 @@ class Datacleaner:
         self.df[col] = self.df[col].fillna(mode_value)
         return self.df
         
-dcleaner = Datacleaner(df)
-# print(dcleaner.df)
 
-dataframe = dcleaner.dropping('Cabin')
-# print(dataframe)
 
-dataframe = dcleaner.mean('Age')
-# print(dataframe)
-
-dataframe = dcleaner.mode('Embarked')
-print(dataframe)
 if __name__ == '__main__':
+
+    dcleaner = Datacleaner(df)
+    # print(dcleaner.df)
+
+    # dropping the cabin column
+    dataframe = dcleaner.dropping('Cabin')
+    # print(dataframe)
+
+    # taking meanof age column and filling the null values with mean value of the column
+    dataframe = dcleaner.mean('Age')
+    # print(dataframe)
+
+    # filling the null values of embarked column with most frequent value of the column
+    dataframe = dcleaner.mode('Embarked')
 
     print(dcleaner.df.isnull().sum())
