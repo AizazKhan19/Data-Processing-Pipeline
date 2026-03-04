@@ -44,7 +44,12 @@ class DataAnalyzer:
 
 
 data_analyzer=DataAnalyzer(dataframe)
+ 
+survival_rate, total_alive, total_deaths = data_analyzer.survival_rate()
+
 print(f'Total Passengers : {data_analyzer.Total_passengers()}\n')
-print(f'Survival Rate of Passengers : {data_analyzer.survival_rate()}\n')
+print(f'Survival Rate of Passengers : {survival_rate}\n')
+print(f'Total Alive Passengers : {total_alive}\n')
+print(f'Total Dead Passengers : {total_deaths}\n')
 print(f'Average Age of Passengers : {data_analyzer.average_age()}\n')
 print(f'Gender Count of Passengers : {data_analyzer.gender_count()}\n')
