@@ -53,3 +53,8 @@ print(f'Total Alive Passengers : {total_alive}\n')
 print(f'Total Dead Passengers : {total_deaths}\n')
 print(f'Average Age of Passengers : {data_analyzer.average_age()}\n')
 print(f'Gender Count of Passengers : {data_analyzer.gender_count()}\n')
+
+
+# saving processed data to a new csv file
+dataframe.to_csv('./data/processed_data.csv', index=False)
+print('Processed data saved to processed_data.csv')
